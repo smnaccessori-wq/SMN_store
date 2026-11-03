@@ -8,75 +8,83 @@
 <style>
 *{box-sizing:border-box}
 body{
- margin:0;
- color:#fff;
- font-family:Tahoma,sans-serif;
- background:
- radial-gradient(ellipse at 15% 15%,#51422d 0%,transparent 35%),
- radial-gradient(ellipse at 85% 75%,#252b43 0%,transparent 40%),
- #090a0e;
- min-height:100vh;
+ margin:0;color:white;font-family:Tahoma,sans-serif;
+ background:radial-gradient(circle at 10% 20%,#49351d,transparent 35%),
+ radial-gradient(circle at 90% 80%,#20263b,transparent 40%),#080808;
 }
 header{
- display:flex;justify-content:space-between;
- align-items:center;padding:22px 7%;
- border-bottom:1px solid #ffffff20;
- background:#ffffff08;
- backdrop-filter:blur(20px);
- position:sticky;top:0;z-index:5;
+ position:sticky;top:0;z-index:10;
+ display:flex;justify-content:space-between;align-items:center;
+ padding:18px 5%;
+ background:#080808cc;backdrop-filter:blur(20px);
+ border-bottom:1px solid #c9a34c66;
 }
-.logo{font-size:32px;font-weight:bold;letter-spacing:6px;color:#e5c783}
-nav{display:flex;gap:25px}
-nav a{color:#ddd;text-decoration:none;font-size:14px}
-nav a:hover{color:#e5c783}
+.logo{font-size:30px;font-weight:bold;color:#eac46d;letter-spacing:5px}
+nav{display:flex;gap:22px}
+nav a{color:#eee;text-decoration:none;font-size:13px}
+.cart{color:#f2d184;border:1px solid #b38b40;padding:10px 15px;border-radius:12px}
 .hero{
- max-width:1100px;margin:65px auto;
- padding:85px 25px;text-align:center;
- border:1px solid #ffffff25;
- border-radius:30px;
- background:linear-gradient(135deg,#ffffff19,#ffffff04);
- backdrop-filter:blur(25px);
- box-shadow:0 20px 70px #0008;
+ margin:35px auto;max-width:1250px;min-height:390px;
+ border:1px solid #b99b5a66;border-radius:25px;
+ display:flex;align-items:center;padding:45px 7%;
+ background:linear-gradient(90deg,#000d,#0004),
+ url('https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1400&q=85') center/cover;
+ box-shadow:0 15px 60px #0009;
 }
-.hero small{color:#e5c783;letter-spacing:4px}
-.hero h1{font-size:clamp(45px,9vw,85px);margin:20px 0}
-.hero p{color:#c4c4c4;line-height:2}
+.hero-content{max-width:550px}
+.hero small{color:#e8c36d;letter-spacing:4px}
+.hero h1{font-size:65px;color:#edc66e;margin:15px 0}
+.hero p{line-height:2;color:#eee}
 .btn{
- display:inline-block;padding:15px 35px;
- background:linear-gradient(120deg,#f0d99e,#ae8843);
- color:#17130b;text-decoration:none;
- border-radius:12px;font-weight:bold;margin-top:20px;
+ display:inline-block;padding:14px 28px;margin-top:15px;
+ background:linear-gradient(120deg,#f5dc9c,#bb8c32);
+ color:#17110a;text-decoration:none;border-radius:12px;font-weight:bold;
 }
-section{max-width:1100px;margin:70px auto;padding:20px}
-.section-title{text-align:center;color:#e5c783;font-size:27px}
-.grid{
- display:grid;grid-template-columns:repeat(3,1fr);
- gap:22px;margin-top:35px
+.section{max-width:1200px;margin:65px auto;padding:0 20px}
+.heading{text-align:center;color:#edc66e;font-size:27px}
+.categories,.products{
+ display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px;
 }
-.card{
- padding:35px 20px;text-align:center;
- border:1px solid #ffffff25;border-radius:22px;
- background:#ffffff0c;backdrop-filter:blur(20px);
- transition:.3s;
+.glass{
+ background:#ffffff0c;border:1px solid #ffffff28;
+ backdrop-filter:blur(18px);border-radius:20px;
+ box-shadow:0 12px 35px #0006;overflow:hidden;
 }
-.card:hover{transform:translateY(-8px);border-color:#e5c783}
-.card .symbol{font-size:38px}
-.card h3{color:#e5c783}
-.card p{color:#aaa;font-size:13px;line-height:2}
+.category{padding:28px 12px;text-align:center;transition:.3s}
+.category:hover,.product:hover{transform:translateY(-6px);border-color:#d4ae5d}
+.category span{font-size:35px;color:#eac46d}
+.category h3{font-size:15px}
+.product{transition:.3s}
+.product img{width:100%;height:190px;object-fit:cover;display:block}
+.product-info{padding:15px;text-align:center}
+.product-info h3{font-size:14px}
+.product-info p{color:#d9b96c;font-size:13px}
+.add{
+ border:0;background:#d8b45f;color:#16110a;
+ border-radius:9px;padding:11px 15px;cursor:pointer;
+ font-weight:bold;width:100%;
+}
 .about{
- text-align:center;padding:40px 20px;
- border:1px solid #ffffff20;border-radius:22px;
- background:#ffffff0a;line-height:2;color:#ccc
+ padding:35px;text-align:center;line-height:2;color:#ccc;
 }
-footer{text-align:center;padding:35px;color:#999;border-top:1px solid #ffffff20}
-@media(max-width:650px){
- header{padding:18px 5%}
- nav{gap:12px}
- nav a{font-size:11px}
- .logo{font-size:25px}
- .hero{margin:30px 15px;padding:65px 15px}
- .grid{grid-template-columns:1fr}
- section{margin:40px auto}
+footer{
+ text-align:center;padding:35px;color:#aaa;
+ border-top:1px solid #ffffff22;margin-top:60px;
+}
+@media(max-width:700px){
+ header{padding:15px 12px}
+ nav{gap:10px}
+ nav a{font-size:10px}
+ .logo{font-size:22px}
+ .hero{margin:15px;min-height:330px;padding:25px}
+ .hero h1{font-size:48px}
+ .categories{grid-template-columns:repeat(2,1fr)}
+ .products{grid-template-columns:repeat(2,1fr);gap:10px}
+ .product img{height:140px}
+ .section{padding:0 12px}
+}
+@media(max-width:380px){
+ .products{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -86,52 +94,86 @@ footer{text-align:center;padding:35px;color:#999;border-top:1px solid #ffffff20}
  <div class="logo">SMN</div>
  <nav>
   <a href="#">خانه</a>
-  <a href="#categories">فروشگاه</a>
-  <a href="#about">درباره ما</a>
+  <a href="#categories">دسته‌بندی</a>
+  <a href="#products">محصولات</a>
  </nav>
+ <div class="cart">🛒 سبد خرید: <span id="count">0</span></div>
 </header>
 
-<main>
- <div class="hero">
+<div class="hero">
+ <div class="hero-content">
   <small>WELCOME TO SMN</small>
-  <h1>Beyond Ordinary.</h1>
+  <h1>SMN</h1>
+  <h2>Beyond Ordinary</h2>
   <p>فراتر از یک خرید معمولی؛ تجربه‌ای متفاوت از انتخاب و سبک زندگی.</p>
-  <a class="btn" href="#categories">کشف فروشگاه</a>
+  <a href="#products" class="btn">مشاهده فروشگاه ←</a>
  </div>
+</div>
 
- <section id="categories">
-  <h2 class="section-title">دسته‌بندی محصولات</h2>
-  <div class="grid">
-   <div class="card">
-    <div class="symbol">✦</div>
-    <h3>پوشاک</h3>
-    <p>انتخاب‌هایی برای سبک خاص شما</p>
-   </div>
-   <div class="card">
-    <div class="symbol">◇</div>
-    <h3>اکسسوری</h3>
-    <p>زیبایی در کوچک‌ترین جزئیات</p>
-   </div>
-   <div class="card">
-    <div class="symbol">❖</div>
-    <h3>سبک زندگی</h3>
-    <p>محصولات منتخب و کاربردی</p>
+<section class="section" id="categories">
+ <h2 class="heading">دسته‌بندی محصولات</h2>
+ <div class="categories">
+  <div class="glass category"><span>⌚</span><h3>ساعت</h3></div>
+  <div class="glass category"><span>🎧</span><h3>لوازم دیجیتال</h3></div>
+  <div class="glass category"><span>🎒</span><h3>کیف و کوله</h3></div>
+  <div class="glass category"><span>👟</span><h3>پوشاک و کفش</h3></div>
+ </div>
+</section>
+
+<section class="section" id="products">
+ <h2 class="heading">محصولات منتخب SMN</h2>
+ <div class="products">
+
+  <div class="glass product">
+   <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" alt="ساعت">
+   <div class="product-info">
+    <h3>ساعت مچی</h3><p>قیمت: به‌زودی</p>
+    <button class="add" onclick="addCart()">افزودن به سبد 🛒</button>
    </div>
   </div>
- </section>
 
- <section id="about">
-  <div class="about">
-   <h2 style="color:#e5c783">SMN EXPERIENCE</h2>
-   <p>سادگی، کیفیت و زیبایی؛ سه اصل در دنیای SMN.</p>
+  <div class="glass product">
+   <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600" alt="هدفون">
+   <div class="product-info">
+    <h3>هدفون بی‌سیم</h3><p>قیمت: به‌زودی</p>
+    <button class="add" onclick="addCart()">افزودن به سبد 🛒</button>
+   </div>
   </div>
- </section>
-</main>
 
-<footer>
- © 2026 SMN Store | All Rights Reserved
-</footer>
+  <div class="glass product">
+   <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600" alt="کوله">
+   <div class="product-info">
+    <h3>کوله پشتی</h3><p>قیمت: به‌زودی</p>
+    <button class="add" onclick="addCart()">افزودن به سبد 🛒</button>
+   </div>
+  </div>
 
+  <div class="glass product">
+   <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="کفش">
+   <div class="product-info">
+    <h3>کفش اسپرت</h3><p>قیمت: به‌زودی</p>
+    <button class="add" onclick="addCart()">افزودن به سبد 🛒</button>
+   </div>
+  </div>
+
+ </div>
+</section>
+
+<section class="section">
+ <div class="glass about">
+  <h2 style="color:#eac46d">SMN PREMIUM STORE</h2>
+  کیفیت، زیبایی و انتخاب متفاوت؛ در یک تجربه خرید.
+ </div>
+</section>
+
+<footer>© 2026 SMN | Premium Shopping Experience</footer>
+
+<script>
+let count=0;
+function addCart(){
+ count++;
+ document.getElementById('count').textContent=count;
+}
+</script>
 </body>
 </html>
-
