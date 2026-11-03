@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMN | فروشگاه آنلاین</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #101010;
+      color: white;
+      font-family: Tahoma, sans-serif;
+    }
+    header {
+      padding: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #b99a58;
+    }
+    .logo {
+      color: #d5b66c;
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: 5px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg,#222,#080808);
+    }
+    .hero h1 {
+      color: #d5b66c;
+      font-size: 42px;
+    }
+    .hero p { color: #ccc; }
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 35px;
+      background: #d5b66c;
+      color: #111;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .products {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .products h2 { color: #d5b66c; }
+    .product {
+      display: inline-block;
+      width: 250px;
+      margin: 15px;
+      padding: 30px;
+      border: 1px solid #444;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #999;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SMN</div>
+    <nav>
+      <a href="#">خانه</a>
+      <a href="#products">فروشگاه</a>
+      <a href="#contact">ارتباط با ما</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>SMN</h1>
+    <p>تجربه‌ای متفاوت از خرید آنلاین</p>
+    <a href="#products" class="btn">مشاهده فروشگاه</a>
+  </section>
+
+  <section class="products" id="products">
+    <h2>دسته‌بندی محصولات</h2>
+    <div class="product">
+      <h3>پوشاک</h3>
+      <p>مجموعه پوشاک منتخب</p>
+    </div>
+    <div class="product">
+      <h3>اکسسوری</h3>
+      <p>زیبایی در جزئیات</p>
+    </div>
+    <div class="product">
+      <h3>محصولات بهداشتی</h3>
+      <p>انتخابی برای زندگی بهتر</p>
+    </div>
+  </section>
+
+  <footer id="contact">
+    © SMN Store
+  </footer>
+</body>
+</html>
