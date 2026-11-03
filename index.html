@@ -2,110 +2,136 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SMN | فروشگاه آنلاین</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: #101010;
-      color: white;
-      font-family: Tahoma, sans-serif;
-    }
-    header {
-      padding: 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #b99a58;
-    }
-    .logo {
-      color: #d5b66c;
-      font-size: 32px;
-      font-weight: bold;
-      letter-spacing: 5px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 14px;
-    }
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(135deg,#222,#080808);
-    }
-    .hero h1 {
-      color: #d5b66c;
-      font-size: 42px;
-    }
-    .hero p { color: #ccc; }
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 35px;
-      background: #d5b66c;
-      color: #111;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-    .products {
-      padding: 50px 20px;
-      text-align: center;
-    }
-    .products h2 { color: #d5b66c; }
-    .product {
-      display: inline-block;
-      width: 250px;
-      margin: 15px;
-      padding: 30px;
-      border: 1px solid #444;
-      border-radius: 8px;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #999;
-      border-top: 1px solid #333;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMN | Premium Store</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ color:#fff;
+ font-family:Tahoma,sans-serif;
+ background:
+ radial-gradient(ellipse at 15% 15%,#51422d 0%,transparent 35%),
+ radial-gradient(ellipse at 85% 75%,#252b43 0%,transparent 40%),
+ #090a0e;
+ min-height:100vh;
+}
+header{
+ display:flex;justify-content:space-between;
+ align-items:center;padding:22px 7%;
+ border-bottom:1px solid #ffffff20;
+ background:#ffffff08;
+ backdrop-filter:blur(20px);
+ position:sticky;top:0;z-index:5;
+}
+.logo{font-size:32px;font-weight:bold;letter-spacing:6px;color:#e5c783}
+nav{display:flex;gap:25px}
+nav a{color:#ddd;text-decoration:none;font-size:14px}
+nav a:hover{color:#e5c783}
+.hero{
+ max-width:1100px;margin:65px auto;
+ padding:85px 25px;text-align:center;
+ border:1px solid #ffffff25;
+ border-radius:30px;
+ background:linear-gradient(135deg,#ffffff19,#ffffff04);
+ backdrop-filter:blur(25px);
+ box-shadow:0 20px 70px #0008;
+}
+.hero small{color:#e5c783;letter-spacing:4px}
+.hero h1{font-size:clamp(45px,9vw,85px);margin:20px 0}
+.hero p{color:#c4c4c4;line-height:2}
+.btn{
+ display:inline-block;padding:15px 35px;
+ background:linear-gradient(120deg,#f0d99e,#ae8843);
+ color:#17130b;text-decoration:none;
+ border-radius:12px;font-weight:bold;margin-top:20px;
+}
+section{max-width:1100px;margin:70px auto;padding:20px}
+.section-title{text-align:center;color:#e5c783;font-size:27px}
+.grid{
+ display:grid;grid-template-columns:repeat(3,1fr);
+ gap:22px;margin-top:35px
+}
+.card{
+ padding:35px 20px;text-align:center;
+ border:1px solid #ffffff25;border-radius:22px;
+ background:#ffffff0c;backdrop-filter:blur(20px);
+ transition:.3s;
+}
+.card:hover{transform:translateY(-8px);border-color:#e5c783}
+.card .symbol{font-size:38px}
+.card h3{color:#e5c783}
+.card p{color:#aaa;font-size:13px;line-height:2}
+.about{
+ text-align:center;padding:40px 20px;
+ border:1px solid #ffffff20;border-radius:22px;
+ background:#ffffff0a;line-height:2;color:#ccc
+}
+footer{text-align:center;padding:35px;color:#999;border-top:1px solid #ffffff20}
+@media(max-width:650px){
+ header{padding:18px 5%}
+ nav{gap:12px}
+ nav a{font-size:11px}
+ .logo{font-size:25px}
+ .hero{margin:30px 15px;padding:65px 15px}
+ .grid{grid-template-columns:1fr}
+ section{margin:40px auto}
+}
+</style>
 </head>
 <body>
-  <header>
-    <div class="logo">SMN</div>
-    <nav>
-      <a href="#">خانه</a>
-      <a href="#products">فروشگاه</a>
-      <a href="#contact">ارتباط با ما</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h1>SMN</h1>
-    <p>تجربه‌ای متفاوت از خرید آنلاین</p>
-    <a href="#products" class="btn">مشاهده فروشگاه</a>
-  </section>
+<header>
+ <div class="logo">SMN</div>
+ <nav>
+  <a href="#">خانه</a>
+  <a href="#categories">فروشگاه</a>
+  <a href="#about">درباره ما</a>
+ </nav>
+</header>
 
-  <section class="products" id="products">
-    <h2>دسته‌بندی محصولات</h2>
-    <div class="product">
-      <h3>پوشاک</h3>
-      <p>مجموعه پوشاک منتخب</p>
-    </div>
-    <div class="product">
-      <h3>اکسسوری</h3>
-      <p>زیبایی در جزئیات</p>
-    </div>
-    <div class="product">
-      <h3>محصولات بهداشتی</h3>
-      <p>انتخابی برای زندگی بهتر</p>
-    </div>
-  </section>
+<main>
+ <div class="hero">
+  <small>WELCOME TO SMN</small>
+  <h1>Beyond Ordinary.</h1>
+  <p>فراتر از یک خرید معمولی؛ تجربه‌ای متفاوت از انتخاب و سبک زندگی.</p>
+  <a class="btn" href="#categories">کشف فروشگاه</a>
+ </div>
 
-  <footer id="contact">
-    © SMN Store
-  </footer>
+ <section id="categories">
+  <h2 class="section-title">دسته‌بندی محصولات</h2>
+  <div class="grid">
+   <div class="card">
+    <div class="symbol">✦</div>
+    <h3>پوشاک</h3>
+    <p>انتخاب‌هایی برای سبک خاص شما</p>
+   </div>
+   <div class="card">
+    <div class="symbol">◇</div>
+    <h3>اکسسوری</h3>
+    <p>زیبایی در کوچک‌ترین جزئیات</p>
+   </div>
+   <div class="card">
+    <div class="symbol">❖</div>
+    <h3>سبک زندگی</h3>
+    <p>محصولات منتخب و کاربردی</p>
+   </div>
+  </div>
+ </section>
+
+ <section id="about">
+  <div class="about">
+   <h2 style="color:#e5c783">SMN EXPERIENCE</h2>
+   <p>سادگی، کیفیت و زیبایی؛ سه اصل در دنیای SMN.</p>
+  </div>
+ </section>
+</main>
+
+<footer>
+ © 2026 SMN Store | All Rights Reserved
+</footer>
+
 </body>
 </html>
+
