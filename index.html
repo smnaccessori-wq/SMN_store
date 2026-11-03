@@ -3,161 +3,217 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SMN | فروشگاه ساعت و زیورآلات</title>
-<meta name="description" content="فروشگاه آنلاین ساعت و زیورآلات SMN">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMN | Watches & Jewelry</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#fffefa;color:#292929}
-header{display:flex;align-items:center;justify-content:space-between;padding:12px 6%;border-bottom:1px solid #eee;position:sticky;top:0;background:#fffefa;z-index:5}
-.logo{display:flex;align-items:center;gap:10px}
-.logo img{width:55px;height:55px;object-fit:contain}
-.logo strong{font-family:Georgia,serif;font-size:27px;letter-spacing:4px;color:#b38b42}
-nav{display:flex;gap:22px}
-nav a{color:#333;text-decoration:none;font-size:14px}
-.actions button,.btn{border:0;background:#b38b42;color:white;padding:11px 18px;border-radius:25px;cursor:pointer}
-.hero{margin:28px auto;width:90%;min-height:360px;border-radius:22px;background:linear-gradient(110deg,#f5efe3,#fff 65%);display:flex;align-items:center;justify-content:space-between;padding:45px;overflow:hidden}
-.hero h1{font-size:clamp(30px,5vw,48px);margin:12px 0;color:#292929}
-.hero p{color:#777;line-height:2}
-.hero img{width:38%;max-height:290px;object-fit:contain}
-.gold{color:#b38b42}
-section{padding:35px 6%}
-.heading{text-align:center;margin-bottom:28px}
-.heading h2{font-size:25px}
-.categories,.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.category,.product{border:1px solid #eee;border-radius:17px;padding:15px;text-align:center;background:white}
-.category img,.product img{width:100%;height:165px;object-fit:contain;border-radius:12px}
-.category h3,.product h3{font-size:15px}
-.product p{color:#a98540;font-weight:bold}
-.product button{background:#292929;color:white;border:0;padding:10px 16px;border-radius:20px;cursor:pointer}
-.benefits{display:flex;justify-content:space-around;gap:15px;background:#f8f5ee;text-align:center;flex-wrap:wrap;padding:28px}
-.benefits div{font-size:13px;line-height:2}
-footer{text-align:center;background:#292929;color:white;padding:30px;line-height:2}
-#cart{position:fixed;bottom:18px;left:18px;background:#b38b42;color:white;border:0;border-radius:30px;padding:14px 20px;z-index:10;cursor:pointer}
-@media(max-width:650px){
-header{padding:10px 4%}
-nav{gap:10px}
-nav a{font-size:11px}
-.hero{padding:25px;min-height:280px}
-.hero img{width:42%}
-.categories,.products{grid-template-columns:repeat(2,1fr);gap:10px}
-.category img,.product img{height:125px}
+body{
+ margin:0;background:#0b0a09;color:#fff;
+ font-family:Tahoma,sans-serif;
+}
+a{text-decoration:none;color:inherit}
+header{
+ position:sticky;top:0;z-index:10;
+ display:flex;justify-content:space-between;
+ align-items:center;padding:18px 6%;
+ background:#101010db;backdrop-filter:blur(20px);
+ border-bottom:1px solid #b99a5b55;
+}
+.logo{font-size:30px;letter-spacing:5px;color:#e5c17a;font-weight:bold}
+nav{display:flex;gap:22px;font-size:13px}
+nav a:hover{color:#e5c17a}
+.cart{border:1px solid #c6a45e;padding:10px 14px;border-radius:10px;color:#e5c17a}
+.hero{
+ min-height:440px;margin:25px auto;max-width:1250px;
+ border-radius:20px;overflow:hidden;
+ display:flex;align-items:center;padding:55px;
+ background:
+ linear-gradient(90deg,#080706 5%,#080706bb 48%,transparent),
+ url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1600') center/cover;
+ border:1px solid #c49d5355;
+}
+.hero-content{max-width:480px}
+.hero small{color:#e4bf76;letter-spacing:4px}
+.hero h1{font-size:65px;color:#e7c681;margin:20px 0}
+.hero p{line-height:2;color:#ddd}
+.btn{
+ display:inline-block;padding:14px 28px;
+ margin-top:15px;background:linear-gradient(120deg,#f2d89b,#b88b42);
+ color:#17120a;border-radius:8px;font-weight:bold;
+}
+.section{max-width:1200px;margin:65px auto;padding:0 20px}
+.title{text-align:center;color:#e4c17b;font-size:26px}
+.subtitle{text-align:center;color:#999;font-size:13px;margin-top:12px}
+.categories{
+ display:grid;grid-template-columns:repeat(4,1fr);
+ gap:18px;margin-top:30px;
+}
+.category{
+ padding:28px 12px;text-align:center;
+ border:1px solid #ffffff25;border-radius:16px;
+ background:linear-gradient(140deg,#ffffff16,#ffffff04);
+ backdrop-filter:blur(15px);transition:.3s;
+}
+.category:hover{border-color:#d7b36d;transform:translateY(-5px)}
+.category .symbol{font-size:38px;color:#e5c17a}
+.category h3{font-size:15px}
+.category p{font-size:11px;color:#aaa}
+.products{
+ display:grid;grid-template-columns:repeat(4,1fr);
+ gap:18px;margin-top:30px;
+}
+.product{
+ overflow:hidden;border:1px solid #ffffff24;
+ border-radius:15px;background:#ffffff0b;transition:.3s;
+}
+.product:hover{transform:translateY(-6px);border-color:#d6b16a}
+.product img{width:100%;height:210px;object-fit:cover;display:block}
+.info{padding:16px}
+.info h3{font-size:14px}
+.price{color:#e4c17b;font-size:14px}
+.add{
+ width:100%;padding:11px;border:0;border-radius:8px;
+ background:linear-gradient(120deg,#f2d89b,#b88b42);
+ color:#17120a;font-weight:bold;cursor:pointer;
+}
+.banner{
+ margin-top:65px;padding:40px 20px;text-align:center;
+ border:1px solid #b99a5b55;border-radius:20px;
+ background:linear-gradient(130deg,#302317,#100e0c,#252019);
+}
+.banner h2{color:#e5c17a}
+footer{
+ text-align:center;padding:35px;color:#999;
+ border-top:1px solid #ffffff20;margin-top:65px;
+ font-size:12px;
+}
+@media(max-width:700px){
+ header{padding:15px 12px}
+ .logo{font-size:23px}
+ nav{gap:9px;font-size:10px}
+ .cart{font-size:11px;padding:8px}
+ .hero{margin:12px;min-height:350px;padding:25px;
+ background-position:60% center}
+ .hero h1{font-size:48px}
+ .categories{grid-template-columns:repeat(2,1fr);gap:10px}
+ .products{grid-template-columns:repeat(2,1fr);gap:10px}
+ .product img{height:145px}
+ .section{padding:0 12px}
 }
 </style>
 </head>
 <body>
 
 <header>
-<div class="logo">
-<img src="smn-logo.png" alt="SMN Logo">
-<strong>SMN</strong>
-</div>
-<nav>
-<a href="#">خانه</a>
-<a href="#categories">دسته‌بندی</a>
-<a href="#products">محصولات</a>
-</nav>
-<div class="actions">
-<button onclick="changeLang()">EN</button>
-</div>
+ <div class="logo">SMN</div>
+ <nav>
+  <a href="#">خانه</a>
+  <a href="#watches">ساعت</a>
+  <a href="#jewelry">بدلیجات</a>
+  <a href="#categories">دسته‌بندی</a>
+ </nav>
+ <div class="cart">🛒 <span id="count">۰</span></div>
 </header>
 
+<main>
 <div class="hero">
-<div>
-<span class="gold">ELEGANCE • STYLE • BEAUTY</span>
-<h1>درخشش، انتخاب توست</h1>
-<p>دنیایی از ساعت‌ها و زیورآلات خاص<br>با امضای SMN</p>
-<a href="#products" class="btn">مشاهده محصولات</a>
-</div>
-<img src="smn-logo.png" alt="SMN">
+ <div class="hero-content">
+  <small>SMN PREMIUM COLLECTION</small>
+  <h1>SMN</h1>
+  <h2>Elegance in Every Detail</h2>
+  <p>زیبایی در جزئیات است؛ انتخابی متفاوت برای سلیقه‌های خاص.</p>
+  <a href="#categories" class="btn">مشاهده مجموعه ←</a>
+ </div>
 </div>
 
-<section id="categories">
-<div class="heading">
-<span class="gold">COLLECTION</span>
-<h2>دسته‌بندی محصولات</h2>
-</div>
-<div class="categories">
-<div class="category">
-<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" alt="ساعت">
-<h3>ساعت مچی</h3>
-</div>
-<div class="category">
-<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400" alt="گردنبند">
-<h3>گردنبند</h3>
-</div>
-<div class="category">
-<img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=400" alt="دستبند">
-<h3>دستبند</h3>
-</div>
-<div class="category">
-<img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400" alt="انگشتر">
-<h3>انگشتر و گوشواره</h3>
-</div>
-</div>
+<section class="section" id="categories">
+ <h2 class="title">دنیای SMN</h2>
+ <p class="subtitle">مجموعه‌ای از زیبایی و ظرافت</p>
+ <div class="categories">
+  <a class="category" href="#watches">
+   <div class="symbol">⌚</div>
+   <h3>ساعت مچی</h3><p>زنانه و مردانه</p>
+  </a>
+  <a class="category" href="#jewelry">
+   <div class="symbol">◇</div>
+   <h3>گردنبند</h3><p>ظریف و چشم‌نواز</p>
+  </a>
+  <a class="category" href="#jewelry">
+   <div class="symbol">✧</div>
+   <h3>دستبند</h3><p>زیبایی در جزئیات</p>
+  </a>
+  <a class="category" href="#jewelry">
+   <div class="symbol">✦</div>
+   <h3>انگشتر</h3><p>خاص و متفاوت</p>
+  </a>
+ </div>
 </section>
 
-<div class="benefits">
-<div>✦ کیفیت و زیبایی</div>
-<div>✦ پشتیبانی مشتریان</div>
-<div>✦ بسته‌بندی شیک</div>
-<div>✦ ارسال به سراسر کشور</div>
-</div>
-
-<section id="products">
-<div class="heading">
-<span class="gold">SMN SELECTION</span>
-<h2>محصولات برگزیده</h2>
-</div>
-<div class="products">
-<div class="product">
-<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" alt="ساعت مچی">
-<h3>ساعت کلاسیک</h3>
-<p>قیمت: به‌زودی</p>
-<button onclick="addCart('ساعت کلاسیک')">افزودن به سبد</button>
-</div>
-<div class="product">
-<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400" alt="گردنبند">
-<h3>گردنبند ظریف</h3>
-<p>قیمت: به‌زودی</p>
-<button onclick="addCart('گردنبند ظریف')">افزودن به سبد</button>
-</div>
-<div class="product">
-<img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=400" alt="دستبند">
-<h3>دستبند خاص</h3>
-<p>قیمت: به‌زودی</p>
-<button onclick="addCart('دستبند خاص')">افزودن به سبد</button>
-</div>
-<div class="product">
-<img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400" alt="انگشتر">
-<h3>انگشتر مینیمال</h3>
-<p>قیمت: به‌زودی</p>
-<button onclick="addCart('انگشتر مینیمال')">افزودن به سبد</button>
-</div>
-</div>
+<section class="section" id="watches">
+ <h2 class="title">Watches Collection</h2>
+ <p class="subtitle">مجموعه ساعت‌های SMN</p>
+ <div class="products">
+  <div class="product">
+   <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600" alt="ساعت کلاسیک">
+   <div class="info"><h3>ساعت کلاسیک</h3><p class="price">قیمت: به‌زودی</p><button class="add" onclick="add()">افزودن به سبد</button></div>
+  </div>
+  <div class="product">
+   <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600" alt="ساعت مچی">
+   <div class="info"><h3>ساعت مدرن</h3><p class="price">قیمت: به‌زودی</p><button class="add" onclick="add()">افزودن به سبد</button></div>
+  </div>
+  <div class="product">
+   <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600" alt="ساعت">
+   <div class="info"><h3>ساعت اسپرت</h3><p class="price">قیمت: به‌زودی</p><button class="add" onclick="add()">افزودن به سبد</button></div>
+  </div>
+  <div class="product">
+   <img src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600" alt="ساعت لوکس">
+   <div class="info"><h3>ساعت خاص</h3><p class="price">قیمت: به‌زودی</p><button class="add" onclick="add()">افزودن به سبد</button></div>
+  </div>
+ </div>
 </section>
+
+<section class="section" id="jewelry">
+ <h2 class="title">Jewelry Collection</h2>
+ <p class="subtitle">زیبایی و درخشش در هر انتخاب</p>
+ <div class="products">
+  <div class="product">
+   <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600" alt="گردنبند">
+   <div class="info"><h3>گردنبند ظریف</h3><p class="price">قیمت: به‌زودی</p><button class="add" onclick="add()">افزودن به سبد</button></div>
+  </div>
+  <div class="product">
+   <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600" alt="دستبند">
+   <div class="info"><h3>دستبند شیک</h3><p class="price">قیمت: به‌زودی</p><button class="add" onclick="add()">افزودن به سبد</button></div>
+  </div>
+  <div class="product">
+   <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600" alt="انگشتر">
+   <div class="info"><h3>انگشتر ظریف</h3><p class="price">قیمت: به‌زودی</p><button class="add" onclick="add()">افزودن به سبد</button></div>
+  </div>
+  <div class="product">
+   <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600" alt="زیورآلات">
+   <div class="info"><h3>مجموعه زیورآلات</h3><p class="price">قیمت: به‌زودی</p><button class="add" onclick="add()">افزودن به سبد</button></div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="banner">
+  <h2>SMN — BEYOND ORDINARY</h2>
+  <p>انتخاب خاص، سبک خاص، امضای شما.</p>
+ </div>
+</section>
+</main>
 
 <footer>
-<h2 class="gold">SMN</h2>
-<p>SHINE WITH SMN</p>
-<p>فروشگاه آنلاین ساعت و زیورآلات</p>
-<p>© SMN 2026</p>
+ SMN PREMIUM STORE<br><br>
+ © 2026 All Rights Reserved
 </footer>
 
-<button id="cart" onclick="showCart()">سبد خرید (<span id="count">0</span>)</button>
-
 <script>
-let cart=[];
-function addCart(item){
-cart.push(item);
-document.getElementById('count').textContent=cart.length;
-alert('محصول به سبد خرید افزوده شد');
-}
-function showCart(){
-alert(cart.length ? 'محصولات سبد خرید:\n'+cart.join('\n') : 'سبد خرید خالی است');
-}
-function changeLang(){
-alert('نسخه انگلیسی در مرحله بعدی ساخته می‌شود.');
+let count=0;
+function add(){
+ count++;
+ document.getElementById('count').textContent=
+ new Intl.NumberFormat('fa-IR').format(count);
 }
 </script>
 </body>
