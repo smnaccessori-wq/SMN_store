@@ -3,218 +3,236 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SMN | Watches & Jewelry</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<title>VELORA LUXE | فروشگاه ساعت و زیورآلات</title>
+<meta name="description" content="فروشگاه آنلاین VELORA LUXE؛ انتخابی لوکس از ساعت و زیورآلات.">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+:root{--gold:#d8b46a;--bg:#090909;--panel:#151515;--muted:#aaa;--white:#f8f5ee}
 *{box-sizing:border-box}
-body{
- margin:0;background:#0b0a09;color:#fff;
- font-family:Tahoma,sans-serif;
-}
-a{text-decoration:none;color:inherit}
-header{
- position:sticky;top:0;z-index:10;
- display:flex;justify-content:space-between;
- align-items:center;padding:18px 6%;
- background:#101010db;backdrop-filter:blur(20px);
- border-bottom:1px solid #b99a5b55;
-}
-.logo{font-size:30px;letter-spacing:5px;color:#e5c17a;font-weight:bold}
-nav{display:flex;gap:22px;font-size:13px}
-nav a:hover{color:#e5c17a}
-.cart{border:1px solid #c6a45e;padding:10px 14px;border-radius:10px;color:#e5c17a}
-.hero{
- min-height:440px;margin:25px auto;max-width:1250px;
- border-radius:20px;overflow:hidden;
- display:flex;align-items:center;padding:55px;
- background:
- linear-gradient(90deg,#080706 5%,#080706bb 48%,transparent),
- url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1600') center/cover;
- border:1px solid #c49d5355;
-}
-.hero-content{max-width:480px}
-.hero small{color:#e4bf76;letter-spacing:4px}
-.hero h1{font-size:65px;color:#e7c681;margin:20px 0}
-.hero p{line-height:2;color:#ddd}
-.btn{
- display:inline-block;padding:14px 28px;
- margin-top:15px;background:linear-gradient(120deg,#f2d89b,#b88b42);
- color:#17120a;border-radius:8px;font-weight:bold;
-}
-.section{max-width:1200px;margin:65px auto;padding:0 20px}
-.title{text-align:center;color:#e4c17b;font-size:26px}
-.subtitle{text-align:center;color:#999;font-size:13px;margin-top:12px}
-.categories{
- display:grid;grid-template-columns:repeat(4,1fr);
- gap:18px;margin-top:30px;
-}
-.category{
- padding:28px 12px;text-align:center;
- border:1px solid #ffffff25;border-radius:16px;
- background:linear-gradient(140deg,#ffffff16,#ffffff04);
- backdrop-filter:blur(15px);transition:.3s;
-}
-.category:hover{border-color:#d7b36d;transform:translateY(-5px)}
-.category .symbol{font-size:38px;color:#e5c17a}
-.category h3{font-size:15px}
-.category p{font-size:11px;color:#aaa}
-.products{
- display:grid;grid-template-columns:repeat(4,1fr);
- gap:18px;margin-top:30px;
-}
-.product{
- overflow:hidden;border:1px solid #ffffff24;
- border-radius:15px;background:#ffffff0b;transition:.3s;
-}
-.product:hover{transform:translateY(-6px);border-color:#d6b16a}
-.product img{width:100%;height:210px;object-fit:cover;display:block}
-.info{padding:16px}
-.info h3{font-size:14px}
-.price{color:#e4c17b;font-size:14px}
-.add{
- width:100%;padding:11px;border:0;border-radius:8px;
- background:linear-gradient(120deg,#f2d89b,#b88b42);
- color:#17120a;font-weight:bold;cursor:pointer;
-}
-.banner{
- margin-top:65px;padding:40px 20px;text-align:center;
- border:1px solid #b99a5b55;border-radius:20px;
- background:linear-gradient(130deg,#302317,#100e0c,#252019);
-}
-.banner h2{color:#e5c17a}
-footer{
- text-align:center;padding:35px;color:#999;
- border-top:1px solid #ffffff20;margin-top:65px;
- font-size:12px;
-}
-@media(max-width:700px){
- header{padding:15px 12px}
- .logo{font-size:23px}
- nav{gap:9px;font-size:10px}
- .cart{font-size:11px;padding:8px}
- .hero{margin:12px;min-height:350px;padding:25px;
- background-position:60% center}
- .hero h1{font-size:48px}
- .categories{grid-template-columns:repeat(2,1fr);gap:10px}
- .products{grid-template-columns:repeat(2,1fr);gap:10px}
- .product img{height:145px}
- .section{padding:0 12px}
-}
+body{margin:0;background:var(--bg);color:var(--white);font-family:Vazirmatn,Tahoma,sans-serif}
+button,input{font:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+header{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 6%;border-bottom:1px solid #29251d;background:#0c0c0c;position:sticky;top:0;z-index:10}
+.logo{display:flex;align-items:center;gap:10px;color:var(--gold);font-size:21px;font-weight:800;letter-spacing:2px}
+.logo svg{width:39px;height:39px}
+nav{display:flex;gap:25px;color:#ddd;font-size:13px}
+nav a:hover{color:var(--gold)}
+.cart-btn,.gold-btn{border:1px solid var(--gold);background:var(--gold);color:#111;padding:10px 17px;border-radius:5px;font-weight:700}
+.cart-btn span{background:#111;color:var(--gold);padding:2px 7px;border-radius:20px;margin-right:5px}
+.hero{min-height:490px;display:flex;align-items:center;padding:65px 9%;background:linear-gradient(90deg,rgba(0,0,0,.93),rgba(0,0,0,.45)),url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-content{max-width:540px}
+.eyebrow{color:var(--gold);letter-spacing:3px;font-size:12px}
+h1{font-size:clamp(36px,6vw,65px);line-height:1.35;margin:15px 0}
+.hero p{color:#ddd;line-height:2;font-size:15px}
+.section{padding:65px 7%}
+.section-title{text-align:center;margin-bottom:32px}
+.section-title h2{font-size:27px;margin:0 0 8px}
+.section-title p{color:var(--muted);font-size:13px}
+.filters{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.filter{background:#171717;color:#ddd;border:1px solid #38332a;padding:9px 19px;border-radius:30px}
+.filter.active,.filter:hover{background:var(--gold);color:#111;border-color:var(--gold)}
+.search{display:block;width:min(100%,390px);margin:0 auto 30px;background:#171717;border:1px solid #38332a;color:white;padding:13px 17px;border-radius:7px;outline:none}
+.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid #29251f;border-radius:9px;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:var(--gold)}
+.card img{width:100%;height:220px;object-fit:cover;background:#222;display:block}
+.card-info{padding:15px}
+.card h3{font-size:15px;margin:0 0 8px}
+.card p{font-size:12px;color:var(--muted);margin:0 0 12px}
+.price{color:var(--gold);font-weight:700;font-size:15px}
+.card-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.add{background:transparent;border:1px solid var(--gold);color:var(--gold);border-radius:5px;padding:7px 10px;font-size:12px}
+.add:hover{background:var(--gold);color:#111}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:35px}
+.about{background:#111;border-top:1px solid #29251f;border-bottom:1px solid #29251f;text-align:center}
+.about p{max-width:650px;margin:15px auto;color:#bbb;line-height:2.2;font-size:14px}
+footer{text-align:center;padding:30px 15px;color:#888;font-size:12px}
+footer strong{color:var(--gold)}
+.overlay{position:fixed;inset:0;background:#000a;z-index:20;display:none}
+.overlay.show{display:block}
+.drawer{position:absolute;right:0;top:0;height:100%;width:min(420px,92%);background:#111;padding:22px;overflow:auto;border-left:1px solid #493b22}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333;padding-bottom:15px}
+.close{background:none;border:0;color:white;font-size:25px}
+.cart-item{display:flex;gap:12px;align-items:center;border-bottom:1px solid #333;padding:14px 0}
+.cart-item img{width:65px;height:65px;object-fit:cover;border-radius:5px}
+.cart-item-info{flex:1}
+.cart-item-info b{font-size:13px}
+.cart-item-info small{display:block;color:var(--gold);margin-top:5px}
+.qty{display:flex;align-items:center;gap:9px;margin-top:8px}
+.qty button{background:#29251f;color:white;border:0;border-radius:4px;width:25px;height:25px}
+.remove{background:none;border:0;color:#e88;font-size:12px}
+.total{display:flex;justify-content:space-between;padding:18px 0;color:var(--gold);font-weight:700}
+.checkout{width:100%;padding:13px;background:#25a45a;color:white;border:0;border-radius:6px;font-weight:700}
+.note{color:#888;font-size:11px;line-height:1.9}
+@media(max-width:900px){.products{grid-template-columns:repeat(2,minmax(0,1fr))}nav{gap:12px}}
+@media(max-width:560px){header{padding:0 4%;height:65px}.logo{font-size:16px}.logo svg{width:32px}nav{display:none}.hero{min-height:420px;padding:45px 7%}.section{padding:45px 4%}.card img{height:170px}.card-info{padding:11px}.card h3{font-size:13px}.price{font-size:13px}}
 </style>
 </head>
 <body>
-
 <header>
- <div class="logo">SMN</div>
- <nav>
-  <a href="#">خانه</a>
-  <a href="#watches">ساعت</a>
-  <a href="#jewelry">بدلیجات</a>
-  <a href="#categories">دسته‌بندی</a>
- </nav>
- <div class="cart">🛒 <span id="count">۰</span></div>
+<a class="logo" href="#">
+<svg viewBox="0 0 100 100" fill="none" aria-label="VELORA logo">
+<path d="M50 5 91 28v44L50 95 9 72V28L50 5Z" stroke="#d8b46a" stroke-width="3"/>
+<path d="m25 30 25 43 25-43M37 30l13 23 13-23" stroke="#d8b46a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+VELORA LUXE
+</a>
+<nav>
+<a href="#home">خانه</a><a href="#products">محصولات</a><a href="#about">درباره ما</a>
+</nav>
+<button class="cart-btn" onclick="openCart()">سبد خرید <span id="cartCount">۰</span></button>
 </header>
 
-<main>
-<div class="hero">
- <div class="hero-content">
-  <small>SMN PREMIUM COLLECTION</small>
-  <h1>SMN</h1>
-  <h2>Elegance in Every Detail</h2>
-  <p>زیبایی در جزئیات است؛ انتخابی متفاوت برای سلیقه‌های خاص.</p>
-  <a href="#categories" class="btn">مشاهده مجموعه ←</a>
- </div>
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="eyebrow">ELEGANCE IS A CHOICE</div>
+<h1>زیبایی در جزئیات است.</h1>
+<p>مجموعه‌ای از ساعت‌ها و زیورآلات برگزیده برای کسانی که سبک خودشان را می‌سازند.</p>
+<a class="gold-btn" href="#products">مشاهده محصولات</a>
 </div>
-
-<section class="section" id="categories">
- <h2 class="title">دنیای SMN</h2>
- <p class="subtitle">مجموعه‌ای از زیبایی و ظرافت</p>
- <div class="categories">
-  <a class="category" href="#watches">
-   <div class="symbol">⌚</div>
-   <h3>ساعت مچی</h3><p>زنانه و مردانه</p>
-  </a>
-  <a class="category" href="#jewelry">
-   <div class="symbol">◇</div>
-   <h3>گردنبند</h3><p>ظریف و چشم‌نواز</p>
-  </a>
-  <a class="category" href="#jewelry">
-   <div class="symbol">✧</div>
-   <h3>دستبند</h3><p>زیبایی در جزئیات</p>
-  </a>
-  <a class="category" href="#jewelry">
-   <div class="symbol">✦</div>
-   <h3>انگشتر</h3><p>خاص و متفاوت</p>
-  </a>
- </div>
 </section>
 
-<section class="section" id="watches">
- <h2 class="title">Watches Collection</h2>
- <p class="subtitle">مجموعه ساعت‌های SMN</p>
- <div class="products">
-  <div class="product">
-   <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600" alt="ساعت کلاسیک">
-   <div class="info"><h3>ساعت کلاسیک</h3><p class="price">قیمت: به‌زودی</p><button class="add" onclick="add()">افزودن به سبد</button></div>
-  </div>
-  <div class="product">
-   <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600" alt="ساعت مچی">
-   <div class="info"><h3>ساعت مدرن</h3><p class="price">قیمت: به‌زودی</p><button class="add" onclick="add()">افزودن به سبد</button></div>
-  </div>
-  <div class="product">
-   <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600" alt="ساعت">
-   <div class="info"><h3>ساعت اسپرت</h3><p class="price">قیمت: به‌زودی</p><button class="add" onclick="add()">افزودن به سبد</button></div>
-  </div>
-  <div class="product">
-   <img src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=600" alt="ساعت لوکس">
-   <div class="info"><h3>ساعت خاص</h3><p class="price">قیمت: به‌زودی</p><button class="add" onclick="add()">افزودن به سبد</button></div>
-  </div>
- </div>
+<section class="section" id="products">
+<div class="section-title">
+<div class="eyebrow">THE COLLECTION</div>
+<h2>مجموعه VELORA</h2>
+<p>انتخابی برای هر سلیقه</p>
+</div>
+<input class="search" id="search" placeholder="جست‌وجوی محصول..." oninput="renderProducts()">
+<div class="filters">
+<button class="filter active" data-filter="all" onclick="setFilter('all',this)">همه</button>
+<button class="filter" data-filter="watch" onclick="setFilter('watch',this)">ساعت</button>
+<button class="filter" data-filter="jewelry" onclick="setFilter('jewelry',this)">زیورآلات</button>
+</div>
+<div class="products" id="productsGrid"></div>
 </section>
 
-<section class="section" id="jewelry">
- <h2 class="title">Jewelry Collection</h2>
- <p class="subtitle">زیبایی و درخشش در هر انتخاب</p>
- <div class="products">
-  <div class="product">
-   <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600" alt="گردنبند">
-   <div class="info"><h3>گردنبند ظریف</h3><p class="price">قیمت: به‌زودی</p><button class="add" onclick="add()">افزودن به سبد</button></div>
-  </div>
-  <div class="product">
-   <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600" alt="دستبند">
-   <div class="info"><h3>دستبند شیک</h3><p class="price">قیمت: به‌زودی</p><button class="add" onclick="add()">افزودن به سبد</button></div>
-  </div>
-  <div class="product">
-   <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600" alt="انگشتر">
-   <div class="info"><h3>انگشتر ظریف</h3><p class="price">قیمت: به‌زودی</p><button class="add" onclick="add()">افزودن به سبد</button></div>
-  </div>
-  <div class="product">
-   <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600" alt="زیورآلات">
-   <div class="info"><h3>مجموعه زیورآلات</h3><p class="price">قیمت: به‌زودی</p><button class="add" onclick="add()">افزودن به سبد</button></div>
-  </div>
- </div>
+<section class="section about" id="about">
+<div class="eyebrow">ABOUT VELORA</div>
+<h2>سادگی، شکوه، ماندگاری</h2>
+<p>در VELORA LUXE تلاش می‌کنیم مجموعه‌ای چشم‌نواز از ساعت و زیورآلات را با گزینش دقیق و نگاهی نو به شما ارائه کنیم.</p>
 </section>
-
-<section class="section">
- <div class="banner">
-  <h2>SMN — BEYOND ORDINARY</h2>
-  <p>انتخاب خاص، سبک خاص، امضای شما.</p>
- </div>
-</section>
-</main>
 
 <footer>
- SMN PREMIUM STORE<br><br>
- © 2026 All Rights Reserved
+<strong>VELORA LUXE</strong>
+<p>زیبایی، در انتخاب توست.</p>
+© 2026 VELORA LUXE
 </footer>
 
+<div class="overlay" id="overlay" onclick="outsideClose(event)">
+<div class="drawer">
+<div class="drawer-head"><b>سبد خرید شما</b><button class="close" onclick="closeCart()">×</button></div>
+<div id="cartItems"></div>
+<div class="total"><span>جمع کل</span><span id="totalPrice">۰ تومان</span></div>
+<button class="checkout" onclick="checkout()">ثبت سفارش در واتساپ</button>
+<p class="note">ثبت سفارش از راه واتساپ انجام می‌شود. پرداخت اینترنتی در این نسخه فعال نیست.</p>
+</div>
+</div>
+
 <script>
-let count=0;
-function add(){
- count++;
- document.getElementById('count').textContent=
- new Intl.NumberFormat('fa-IR').format(count);
+"use strict";
+
+const products = [
+{id:1,name:"ساعت کلاسیک طلایی",category:"watch",price:2450000,description:"طراحی شیک و مینیمال",image:"https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=700&q=80"},
+{id:2,name:"ساعت مشکی لوکس",category:"watch",price:3190000,description:"سبک مدرن و رسمی",image:"https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=700&q=80"},
+{id:3,name:"ساعت بند فلزی",category:"watch",price:2780000,description:"مناسب استفاده روزانه",image:"https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=700&q=80"},
+{id:4,name:"ساعت مینیمال",category:"watch",price:2250000,description:"زیبایی در سادگی",image:"https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?auto=format&fit=crop&w=700&q=80"},
+{id:5,name:"گردنبند ظریف",category:"jewelry",price:890000,description:"درخشش ظریف و دلنشین",image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=80"},
+{id:6,name:"دستبند مینیمال",category:"jewelry",price:750000,description:"انتخابی برای هر روز",image:"https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=80"},
+{id:7,name:"انگشتر مدرن",category:"jewelry",price:680000,description:"طراحی ساده و خاص",image:"https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=700&q=80"},
+{id:8,name:"گوشواره ظریف",category:"jewelry",price:590000,description:"جزئیاتی برای درخشش بیشتر",image:"https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=80"}
+];
+
+const formatPrice = n => new Intl.NumberFormat("fa-IR").format(n) + " تومان";
+let filter = "all";
+let cart = {};
+
+try {
+ const saved = JSON.parse(localStorage.getItem("velora_cart") || "{}");
+ if(saved && typeof saved === "object" && !Array.isArray(saved)) cart = saved;
+} catch(e) { cart = {}; }
+
+function saveCart(){
+ try { localStorage.setItem("velora_cart",JSON.stringify(cart)); }
+ catch(e) { console.warn("ذخیره سبد خرید در این مرورگر در دسترس نیست."); }
 }
+
+function safeImage(url){
+ return url.replace(/"/g,"%22");
+}
+
+function renderProducts(){
+ const grid=document.getElementById("productsGrid");
+ const q=document.getElementById("search").value.trim().toLowerCase();
+ const list=products.filter(p=>(filter==="all"||p.category===filter)&&p.name.toLowerCase().includes(q));
+ if(!list.length){grid.innerHTML='<div class="empty">محصولی پیدا نشد.</div>';return;}
+ grid.innerHTML=list.map(p=>`
+ <article class="card">
+ <img src="${safeImage(p.image)}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%231d1d1d%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%23d8b46a%22 font-size=%2230%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EVELORA LUXE%3C/text%3E%3C/svg%3E'">
+ <div class="card-info">
+ <h3>${p.name}</h3><p>${p.description}</p>
+ <div class="card-bottom"><span class="price">${formatPrice(p.price)}</span>
+ <button class="add" onclick="addToCart(${p.id})">افزودن +</button></div>
+ </div></article>`).join("");
+}
+
+function setFilter(value,button){
+ filter=value;
+ document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));
+ button.classList.add("active");
+ renderProducts();
+}
+
+function addToCart(id){
+ cart[id]=(Number(cart[id])||0)+1;
+ saveCart();updateCart();
+}
+
+function updateCart(){
+ let count=0,total=0;
+ products.forEach(p=>{
+ const qty=Math.max(0,Number(cart[p.id])||0);
+ count+=qty;total+=qty*p.price;
+ });
+ document.getElementById("cartCount").textContent=new Intl.NumberFormat("fa-IR").format(count);
+ document.getElementById("totalPrice").textContent=formatPrice(total);
+ const box=document.getElementById("cartItems");
+ const items=products.filter(p=>(Number(cart[p.id])||0)>0);
+ if(!items.length){box.innerHTML='<p class="empty">سبد خرید خالی است.</p>';return;}
+ box.innerHTML=items.map(p=>`
+ <div class="cart-item">
+ <img src="${safeImage(p.image)}" alt="${p.name}">
+ <div class="cart-item-info"><b>${p.name}</b><small>${formatPrice(p.price)}</small>
+ <div class="qty"><button onclick="changeQty(${p.id},-1)">−</button><span>${new Intl.NumberFormat("fa-IR").format(cart[p.id])}</span><button onclick="changeQty(${p.id},1)">+</button></div></div>
+ <button class="remove" onclick="removeItem(${p.id})">حذف</button>
+ </div>`).join("");
+}
+
+function changeQty(id,delta){
+ cart[id]=(Number(cart[id])||0)+delta;
+ if(cart[id]<=0)delete cart[id];
+ saveCart();updateCart();
+}
+function removeItem(id){delete cart[id];saveCart();updateCart();}
+function openCart(){document.getElementById("overlay").classList.add("show");}
+function closeCart(){document.getElementById("overlay").classList.remove("show");}
+function outsideClose(e){if(e.target.id==="overlay")closeCart();}
+
+function checkout(){
+ const items=products.filter(p=>(Number(cart[p.id])||0)>0);
+ if(!items.length){alert("سبد خرید شما خالی است.");return;}
+ const phone="989123456789"; // شماره واتساپ فروشگاه را جایگزین کن
+ const lines=items.map(p=>`${p.name} - تعداد ${cart[p.id]} - ${formatPrice(p.price*cart[p.id])}`);
+ const total=items.reduce((sum,p)=>sum+p.price*cart[p.id],0);
+ const message=["سلام، برای ثبت سفارش از VELORA LUXE پیام می‌دهم:","",...lines,"","جمع کل: "+formatPrice(total)].join("\n");
+ window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(message),"_blank","noopener");
+}
+
+renderProducts();
+updateCart();
 </script>
 </body>
 </html>
