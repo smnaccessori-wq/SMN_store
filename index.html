@@ -193,15 +193,50 @@ function openProduct(id){
   const p = products.find(item => item.id === id);
   if(!p) return;
 
-  alert(
-    p.name + "\n\n" +
-    p.description + "\n\n" +
-    formatPrice(p.price)
-  );
- }{
- cart[id]=(Number(cart[id])||0)+1;
- saveCart();updateCart();
-}
+  const old = document.getElementById("productModal");
+  if(old) old.remove();
+
+  const modal = document.createElement("div");
+  modal.id = "productModal";
+
+  modal.style.cssText = `
+    position:fixed; inset:0; z-index:9999;
+    background:rgba(0,0,0,.92);
+    display:flex; align-items:center;
+    justify-content:center; padding:20px;
+  `;
+
+  modal.innerHTML = `
+    <div style="background:#171717;color:white;
+      border:1px solid #c9a44c;border-radius:18px;
+      max-width:420px;width:100%;padding:18px;
+      text-align:center;position:relative">
+
+      <button onclick="document.getElementById('productModal').remove()"
+        style="position:absolute;left:12px;top:12px;
+        background:none;color:#d4af37;border:0;font-size:25px">
+        ×
+      </button>
+
+      <img src="${safeImage(p.image)}"
+        style="width:100%;height:250px;object-fit:cover;
+        border-radius:12px">
+
+      <h2 style="color:#d4af37">${p.name}</h2>
+      <p>${p.description}</p>
+      <h3 style="color:#d4af37">${formatPrice(p.price)}</h3>
+
+      <button onclick="addToCart(${p.id});document.getElementById('productModal').remove()"
+        style="background:#d4af37;color:#111;
+        border:0;border-radius:9px;padding:13px 25px;
+        font-weight:bold;width:100%">
+        افزودن به سبد خرید
+      </button>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+ }
 
 function updateCart(){
  let count=0,total=0;
